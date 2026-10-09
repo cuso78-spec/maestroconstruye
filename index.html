@@ -21,14 +21,8 @@
         --white: #ffffff;
       }
 
-      * {
-        box-sizing: border-box;
-      }
-
-      html {
-        scroll-behavior: smooth;
-      }
-
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
       body {
         margin: 0;
         font-family: Arial, Helvetica, sans-serif;
@@ -36,21 +30,9 @@
         background: var(--white);
         line-height: 1.7;
       }
-
-      img {
-        max-width: 100%;
-        display: block;
-      }
-
-      a {
-        text-decoration: none;
-      }
-
-      .container {
-        width: min(1180px, 92%);
-        margin: 0 auto;
-      }
-
+      img { max-width: 100%; display: block; }
+      a { text-decoration: none; }
+      .container { width: min(1180px, 92%); margin: 0 auto; }
       .btn {
         display: inline-block;
         padding: 15px 30px;
@@ -58,25 +40,17 @@
         font-weight: 700;
         transition: 0.2s ease;
       }
-
       .btn-primary {
         background: var(--gold);
         color: var(--white);
       }
-
-      .btn-primary:hover {
-        background: var(--gold-dark);
-      }
-
+      .btn-primary:hover { background: var(--gold-dark); }
       .btn-secondary {
         background: transparent;
         color: var(--white);
         border: 2px solid rgba(255,255,255,0.7);
       }
-
-      .btn-secondary:hover {
-        background: rgba(255,255,255,0.08);
-      }
+      .btn-secondary:hover { background: rgba(255,255,255,0.08); }
 
       .section-title {
         text-align: center;
@@ -96,7 +70,7 @@
       header {
         background:
           linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-          url("https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1600&q=80")
+          url("portada.png")
           center/cover no-repeat;
         min-height: 84vh;
         color: var(--white);
@@ -106,7 +80,7 @@
         position: sticky;
         top: 0;
         z-index: 30;
-        background: rgba(0,0,0,0.6);
+        background: rgba(0,0,0,0.55);
         backdrop-filter: blur(4px);
       }
 
@@ -123,9 +97,7 @@
         letter-spacing: 1.5px;
       }
 
-      .logo span {
-        color: var(--gold);
-      }
+      .logo span { color: var(--gold); }
 
       .nav-links {
         display: flex;
@@ -145,9 +117,7 @@
         padding: 50px 0 70px;
       }
 
-      .hero-inner {
-        max-width: 760px;
-      }
+      .hero-inner { max-width: 760px; }
 
       .hero-kicker {
         text-transform: uppercase;
@@ -169,6 +139,7 @@
         color: rgba(255,255,255,0.85);
         max-width: 620px;
         margin-bottom: 28px;
+        line-height: 1.6;
       }
 
       .hero-actions {
@@ -197,16 +168,11 @@
         color: var(--gold);
       }
 
-      .stat span {
-        color: rgba(255,255,255,0.78);
-      }
+      .stat span { color: rgba(255,255,255,0.78); }
 
-      section {
-        padding: 90px 0;
-      }
+      section { padding: 90px 0; }
 
-      .services-grid,
-      .projects-grid {
+      .services-grid, .projects-grid {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 28px;
@@ -227,10 +193,7 @@
         color: var(--brown);
       }
 
-      .card p {
-        margin: 0;
-        color: var(--muted);
-      }
+      .card p { margin: 0; color: var(--muted); }
 
       .project-card {
         background: var(--white);
@@ -246,19 +209,10 @@
         object-fit: cover;
       }
 
-      .project-body {
-        padding: 20px 20px 24px;
-      }
-
-      .project-body h3 {
-        margin: 0 0 10px;
-        color: var(--brown);
-      }
-
-      .project-body p {
-        margin: 0;
-        color: var(--muted);
-      }
+      .project-body { padding: 20px 20px 24px; }
+      .project-body h3 { margin: 0 0 10px; color: var(--brown); font-size: 1.2rem; }
+      .project-body p { margin: 0; color: var(--muted); font-size: 0.95rem; }
+      .project-location { color: var(--gold); font-weight: 600; font-size: 0.9rem; margin-bottom: 6px; }
 
       .contact {
         background: var(--dark);
@@ -266,11 +220,7 @@
         text-align: center;
       }
 
-      .contact-box {
-        max-width: 760px;
-        margin: 0 auto;
-      }
-
+      .contact-box { max-width: 760px; margin: 0 auto; }
       .contact-box p {
         color: rgba(255,255,255,0.75);
         font-size: 1.05rem;
@@ -310,19 +260,14 @@
           gap: 16px;
         }
 
-        .services-grid,
-        .projects-grid {
-          grid-template-columns: 1fr;
-        }
+        .services-grid, .projects-grid { grid-template-columns: 1fr; }
 
         .hero-actions {
           flex-direction: column;
           align-items: flex-start;
         }
 
-        .stats {
-          grid-template-columns: 1fr;
-        }
+        .stats { grid-template-columns: 1fr; }
       }
     </style>
   </head>
@@ -330,7 +275,7 @@
     <header>
       <div class="topbar">
         <div class="container nav">
-          <div class="logo"><span>MAESTRO</span> CONSTRUIR</div>
+          <div class="logo"><span>MAESTRO</span> CONSTRUYE</div>
           <nav class="nav-links">
             <a href="#servicios">Servicios</a>
             <a href="#proyectos">Proyectos</a>
@@ -344,8 +289,7 @@
           <div class="hero-kicker">Construcción • Remodelación • Acabados</div>
           <h1>Construimos espacios que transforman tu vida</h1>
           <p>
-            Expertos en proyectos de construcción, remodelación y acabados con atención
-            personalizada, calidad y compromiso en cada detalle.
+            Con más de 20 años de experiencia en construcción, ofrecemos soluciones de calidad en remodelación, acabados y mejoras. Trabajamos en la Región Metropolitana y la Región de Valparaíso con compromiso, seriedad y atención personalizada en cada proyecto.
           </p>
 
           <div class="hero-actions">
@@ -355,7 +299,7 @@
 
           <div class="stats">
             <div class="stat">
-              <strong>+10</strong>
+              <strong>20+</strong>
               <span>Años de experiencia</span>
             </div>
             <div class="stat">
@@ -411,40 +355,61 @@
         <div class="container">
           <h2 class="section-title">Proyectos destacados</h2>
           <p class="section-subtitle">
-            Trabajos realizados con visión moderna, precisión y atención al detalle.
+            Trabajos realizados con visión profesional, precisión y atención al detalle.
           </p>
 
           <div class="projects-grid">
             <article class="project-card">
-              <img
-                src="https://images.unsplash.com/photo-1523217582562-09d0def993a6?auto=format&fit=crop&w=900&q=80"
-                alt="Proyecto de vivienda"
-              />
+              <img src="pintura1.jpg" alt="Pintura Complejo Deportivo UC" />
               <div class="project-body">
-                <h3>Casa familiar</h3>
-                <p>Remodelación total con espacios modernos y funcionales.</p>
+                <div class="project-location">San Carlos de Apoquindo</div>
+                <h3>Pintura Complejo Deportivo UC</h3>
+                <p>Renovación y pintura en containers del complejo deportivo de la Universidad Católica. Trabajo de acabados profesional y duradero.</p>
               </div>
             </article>
 
             <article class="project-card">
-              <img
-                src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80"
-                alt="Proyecto comercial"
-              />
+              <img src="estructuras3.jpg" alt="Estructura Metálica UC" />
               <div class="project-body">
-                <h3>Oficina comercial</h3>
-                <p>Renovación para generar una imagen más moderna y profesional.</p>
+                <div class="project-location">San Carlos de Apoquindo</div>
+                <h3>Estructura Metálica Containers</h3>
+                <p>Instalación de estructura metálica para containers en San Carlos de Apoquindo. Uso de camarines, baños y duchas para el complejo deportivo.</p>
               </div>
             </article>
 
             <article class="project-card">
-              <img
-                src="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=900&q=80"
-                alt="Proyecto llave en mano"
-              />
+              <img src="estructuras4.jpg" alt="Containers UC" />
               <div class="project-body">
-                <h3>Proyecto llave en mano</h3>
-                <p>Solución integral desde diseño hasta entrega final.</p>
+                <div class="project-location">San Carlos de Apoquindo</div>
+                <h3>Instalación Containers UC</h3>
+                <p>Instalación de containers para uso de profesores de la UC con baño y sala de estar. Proyecto integral con acabados profesionales.</p>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <img src="techumbre.jpg" alt="Reparación Techumbre" />
+              <div class="project-body">
+                <div class="project-location">La Reina, Región Metropolitana</div>
+                <h3>Reparación y Pintura Techumbre</h3>
+                <p>Reparación y pintura de techumbre en La Reina. Trabajos de mantención y mejora con materiales de calidad y durabilidad garantizada.</p>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <img src="reparación.jpg" alt="Renovación Frente Casa" />
+              <div class="project-body">
+                <div class="project-location">Macul, Región Metropolitana</div>
+                <h3>Renovación Frente de Casa</h3>
+                <p>Renovación completa del frente con cemento y posterior instalación de siding. Transformación integral con acabados modernos y funcionales.</p>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <img src="portada.png" alt="Maestro Construye" />
+              <div class="project-body">
+                <div class="project-location">Región Metropolitana y Valparaíso</div>
+                <h3>Proyectos Completos</h3>
+                <p>Soluciones integrales de construcción y remodelación. Desde la planificación hasta la entrega, con calidad y profesionalismo garantizado.</p>
               </div>
             </article>
           </div>
@@ -456,11 +421,11 @@
           <h2 class="section-title" style="color: white;">Contáctanos</h2>
           <p>
             Estamos listos para ayudarte a llevar a cabo tu próximo proyecto de
-            construcción o remodelación.
+            construcción o remodelación en la Región Metropolitana o Región de Valparaíso.
           </p>
 
           <div class="contact-links">
-            <a class="mini-link" href="mailto:contacto@maestroconstruye.com">contacto@maestroconstruye.com</a>
+            <a class="mini-link" href="mailto:casascont@gmail.com">casascont@gmail.com</a>
             <span>|</span>
             <a class="mini-link" href="tel:+56967202358">+56 9 6720 2358</a>
           </div>
