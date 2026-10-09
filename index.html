@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maestro Construye | Construcción y Remodelación</title>
+    <meta
+      name="description"
+      content="Maestro Construye ofrece servicios de construcción, remodelación, acabados y proyectos llave en mano."
+    />
+    <style>
+      :root {
+        --gold: #c99135;
+        --gold-dark: #a96f15;
+        --brown: #3b2a1a;
+        --dark: #171717;
+        --black: #0d0d0d;
+        --text: #2b2b2b;
+        --muted: #6a6a6a;
+        --light: #f5f1ea;
+        --white: #ffffff;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        color: var(--text);
+        background: var(--white);
+        line-height: 1.7;
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      .container {
+        width: min(1180px, 92%);
+        margin: 0 auto;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 15px 30px;
+        border-radius: 999px;
+        font-weight: 700;
+        transition: 0.2s ease;
+      }
+
+      .btn-primary {
+        background: var(--gold);
+        color: var(--white);
+      }
+
+      .btn-primary:hover {
+        background: var(--gold-dark);
+      }
+
+      .btn-secondary {
+        background: transparent;
+        color: var(--white);
+        border: 2px solid rgba(255,255,255,0.7);
+      }
+
+      .btn-secondary:hover {
+        background: rgba(255,255,255,0.08);
+      }
+
+      .section-title {
+        text-align: center;
+        margin-bottom: 18px;
+        font-size: clamp(2rem, 4vw, 3rem);
+        color: var(--brown);
+      }
+
+      .section-subtitle {
+        text-align: center;
+        width: min(700px, 90%);
+        margin: 0 auto 40px;
+        color: var(--muted);
+        font-size: 1.03rem;
+      }
+
+      header {
+        background:
+          linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+          url("https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1600&q=80")
+          center/cover no-repeat;
+        min-height: 84vh;
+        color: var(--white);
+      }
+
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 30;
+        background: rgba(0,0,0,0.6);
+        backdrop-filter: blur(4px);
+      }
+
+      .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 80px;
+      }
+
+      .logo {
+        font-size: 1.5rem;
+        font-weight: 800;
+        letter-spacing: 1.5px;
+      }
+
+      .logo span {
+        color: var(--gold);
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 28px;
+        align-items: center;
+      }
+
+      .nav-links a {
+        color: rgba(255,255,255,0.9);
+        font-weight: 600;
+      }
+
+      .hero {
+        display: flex;
+        align-items: center;
+        min-height: calc(84vh - 80px);
+        padding: 50px 0 70px;
+      }
+
+      .hero-inner {
+        max-width: 760px;
+      }
+
+      .hero-kicker {
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 700;
+        font-size: 0.8rem;
+        color: var(--gold);
+        margin-bottom: 14px;
+      }
+
+      h1 {
+        font-size: clamp(2.8rem, 6vw, 5rem);
+        line-height: 1.08;
+        margin: 0 0 18px;
+      }
+
+      .hero p {
+        font-size: 1.12rem;
+        color: rgba(255,255,255,0.85);
+        max-width: 620px;
+        margin-bottom: 28px;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(120px, 1fr));
+        gap: 22px;
+        margin-top: 38px;
+      }
+
+      .stat {
+        background: rgba(255,255,255,0.06);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 16px;
+        padding: 18px 16px;
+      }
+
+      .stat strong {
+        display: block;
+        font-size: 1.8rem;
+        color: var(--gold);
+      }
+
+      .stat span {
+        color: rgba(255,255,255,0.78);
+      }
+
+      section {
+        padding: 90px 0;
+      }
+
+      .services-grid,
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 28px;
+        margin-top: 38px;
+      }
+
+      .card {
+        background: var(--light);
+        border: 1px solid rgba(0,0,0,0.04);
+        border-radius: 22px;
+        padding: 30px 24px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+      }
+
+      .card h3 {
+        font-size: 1.5rem;
+        margin: 0 0 10px;
+        color: var(--brown);
+      }
+
+      .card p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .project-card {
+        background: var(--white);
+        border: 1px solid rgba(0,0,0,0.06);
+        border-radius: 22px;
+        overflow: hidden;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+      }
+
+      .project-card img {
+        width: 100%;
+        height: 240px;
+        object-fit: cover;
+      }
+
+      .project-body {
+        padding: 20px 20px 24px;
+      }
+
+      .project-body h3 {
+        margin: 0 0 10px;
+        color: var(--brown);
+      }
+
+      .project-body p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .contact {
+        background: var(--dark);
+        color: var(--white);
+        text-align: center;
+      }
+
+      .contact-box {
+        max-width: 760px;
+        margin: 0 auto;
+      }
+
+      .contact-box p {
+        color: rgba(255,255,255,0.75);
+        font-size: 1.05rem;
+      }
+
+      .contact-links {
+        margin-top: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 14px;
+      }
+
+      .mini-link {
+        color: var(--white);
+        font-weight: 700;
+      }
+
+      footer {
+        background: var(--black);
+        color: rgba(255,255,255,0.8);
+        text-align: center;
+        padding: 22px 12px;
+      }
+
+      @media (max-width: 768px) {
+        .nav {
+          flex-direction: column;
+          justify-content: center;
+          gap: 12px;
+          padding: 18px 0;
+        }
+
+        .nav-links {
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 16px;
+        }
+
+        .services-grid,
+        .projects-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .hero-actions {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .stats {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="topbar">
+        <div class="container nav">
+          <div class="logo"><span>MAESTRO</span> CONSTRUIR</div>
+          <nav class="nav-links">
+            <a href="#servicios">Servicios</a>
+            <a href="#proyectos">Proyectos</a>
+            <a href="#contacto">Contacto</a>
+          </nav>
+        </div>
+      </div>
+
+      <div class="container hero">
+        <div class="hero-inner">
+          <div class="hero-kicker">Construcción • Remodelación • Acabados</div>
+          <h1>Construimos espacios que transforman tu vida</h1>
+          <p>
+            Expertos en proyectos de construcción, remodelación y acabados con atención
+            personalizada, calidad y compromiso en cada detalle.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contacto">Solicitar cotización</a>
+            <a class="btn btn-secondary" href="#servicios">Ver servicios</a>
+          </div>
+
+          <div class="stats">
+            <div class="stat">
+              <strong>+10</strong>
+              <span>Años de experiencia</span>
+            </div>
+            <div class="stat">
+              <strong>250+</strong>
+              <span>Proyectos realizados</span>
+            </div>
+            <div class="stat">
+              <strong>100%</strong>
+              <span>Compromiso con la calidad</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="servicios">
+        <div class="container">
+          <h2 class="section-title">Nuestros servicios</h2>
+          <p class="section-subtitle">
+            Diseñamos soluciones integrales para viviendas, locales y proyectos comerciales.
+          </p>
+
+          <div class="services-grid">
+            <article class="card">
+              <h3>Construcción</h3>
+              <p>
+                Desarrollo de proyectos nuevos con planificación, materiales de calidad
+                y ejecución segura y profesional.
+              </p>
+            </article>
+
+            <article class="card">
+              <h3>Remodelación</h3>
+              <p>
+                Transformamos interiores y exteriores para mejorar funcionalidad,
+                confort y estilo en cada espacio.
+              </p>
+            </article>
+
+            <article class="card">
+              <h3>Acabados</h3>
+              <p>
+                Llevamos cada detalle al siguiente nivel con acabados impecables y
+                resultados duraderos.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="proyectos">
+        <div class="container">
+          <h2 class="section-title">Proyectos destacados</h2>
+          <p class="section-subtitle">
+            Trabajos realizados con visión moderna, precisión y atención al detalle.
+          </p>
+
+          <div class="projects-grid">
+            <article class="project-card">
+              <img
+                src="https://images.unsplash.com/photo-1523217582562-09d0def993a6?auto=format&fit=crop&w=900&q=80"
+                alt="Proyecto de vivienda"
+              />
+              <div class="project-body">
+                <h3>Casa familiar</h3>
+                <p>Remodelación total con espacios modernos y funcionales.</p>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <img
+                src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80"
+                alt="Proyecto comercial"
+              />
+              <div class="project-body">
+                <h3>Oficina comercial</h3>
+                <p>Renovación para generar una imagen más moderna y profesional.</p>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <img
+                src="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=900&q=80"
+                alt="Proyecto llave en mano"
+              />
+              <div class="project-body">
+                <h3>Proyecto llave en mano</h3>
+                <p>Solución integral desde diseño hasta entrega final.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contacto">
+        <div class="container contact-box">
+          <h2 class="section-title" style="color: white;">Contáctanos</h2>
+          <p>
+            Estamos listos para ayudarte a llevar a cabo tu próximo proyecto de
+            construcción o remodelación.
+          </p>
+
+          <div class="contact-links">
+            <a class="mini-link" href="mailto:contacto@maestroconstruye.com">contacto@maestroconstruye.com</a>
+            <span>|</span>
+            <a class="mini-link" href="tel:+56967202358">+56 9 6720 2358</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      © 2026 Maestro Construye. Todos los derechos reservados.
+    </footer>
+  </body>
+</html>
